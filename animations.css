@@ -1,0 +1,43 @@
+@keyframes fade{from {opacity: 0;} to {opacity: 1;}}
+
+@keyframes rotate-clockwise{from{opacity: 0; transform: rotate(0)} to {opacity: 1; transform: rotate(360deg)}}
+
+@keyframes slide-left{from {left: -40%;} to{left:40%;}}
+
+@keyframes run-out{
+	0%{left: 0%;}
+	10%{left: 10%; transform: skewX(15deg);}
+	20%{left: 15%;}
+	30%{left: 20%;}
+	40%{left: 25%;}
+	50%{left: 30%;}
+	60%{left: 35%;}
+	70%{left: 40%;}
+	80%{left: 45%;}
+	90%{left: 55%;}
+	100%{left: 70%; opacity:0;}
+}
+
+@keyframes flip{
+	0% {-webkit-transform: rotateY(0);transform: rotateY(0);}
+	50% {-webkit-transform: rotateY(180deg);transform: rotateY(180deg);}
+	100% {-webkit-transform: rotateY(0);transform: rotateY(0);}
+}
+
+.slide-left{
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	animation-name: slide-left;	
+	animation-timing-function: linear;
+}
+
+.flip{animation: flip 2s 0s linear 1;}
+
+.run-out{animation: run-out 4s 0s linear 1;}
+
+.fade{animation: fade 1.5s 2s ease-in 3;}
+
+.rotate-clockwise{animation: rotate-clockwise 4s 0s linear 1 ;}
+
+.rotate-clockwise-reverse{animation: rotate-clockwise 4s 0s linear 1 reverse;}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Animation tutorial</title>
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="animations.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<section class="intro">
+	<h1 align="center">Les animations CSS</h1>
+	<hr>
+	<h2>D&eacute;finition:</h2>
+	<p class="content">Une animation CSS est une s&eacute;rie de <strong>transformations</strong> qu'on attache &agrave; un &eacute;l&eacute;ment HTML <strong>pour une dur&eacute;e choisie.</strong></p>	
+</section>
+<section class="transformations">
+	<h2>Quelques types de transformations</h2>
+	<h3>Transparence:</h3>
+	<div><p>This is not transparent</p></div>
+	<div class="transparent"><p>This is partially transparent</p></div>
+	
+	<code>
+		<span class="tags">&lt;div</span><span class="class"> class="transparent"&gt;</span><span class="tags">&lt;/div&gt;</span>
+	</code>
+	<code class="css">
+		.transparent{opacity='0.5'}
+	</code>
+	<h3>Size:</h3>
+	<div><p>This is scale=1</p></div>
+	<div class="scaled"><p>This is scale=1.5</p></div>
+	
+	<code>
+		<span class="tags">&lt;div</span><span class="class"> class="scaled"&gt;</span><span class="tags">&lt;/div&gt;</span>
+	</code>
+	<code class="css">
+		.scaled{transform: scale(1.5);}
+	</code>
+	
+	<h3>Rotate:</h3>
+	<div class="rotated"><p>This is rotated 60&deg;</p></div>
+	
+	<code>
+		<span class="tags">&lt;div</span><span class="class"> class="rotated"</span><span class="tags">&gt;&lt;/div&gt;</span>
+	</code>
+	<code class="css">
+		.rotated{transform: rotate(60deg);}
+	</code>
+	
+	<h3>Skew:</h3>
+	<div class="skewed"><p>This is skewed</p></div>
+	
+	<code>
+		<span class="tags">&lt;div</span><span class="class"> class="skewed"&gt;</span><span class="tags">&lt;/div&gt;</span>
+	</code>
+	<code class="css">
+		.scaled{transform: skewX(20deg);}
+	</code>
+</section>
+<section class="animations" id="divs">
+<h2>Comment cr&eacute;er une animation CSS:</h2>
+<p>On cr&eacute;e une animation CSS en utilisant le mot cl&eacute; <strong class="keyframe">@keyframes</strong> suivi par <strong class="name">le nom de l'animation</strong> suivis par les frames. <strong>E</strong>xample:</p>
+<code><span class="keyframe">@keyframes</span><span class="name"> fade</span><span class="keys">{<br>from {opacity: 0;} <br>to {opacity: 1;}}</span></code>
+<h2>Comment attribuer une animation &agrave; un &eacute;l&eacute;ment:</h2>
+	<h3>On a 2 m&eacute;thodes: </h3>
+	<h3>La methode detaillee:</h3>
+	<code>.slide-left{<br>
+	animation-delay: 0s;<br>
+	animation-direction: normal;<br>
+	animation-iteration-count: 1;<br>
+	animation-name: slide-left;	<br>
+	animation-timing-function: linear;<br>
+	}</code>
+	<h3>La methode reduite:</h3>
+	<code class="line">.fade{animation: fade(1) 1.5s(2) 2s(3) ease-in(4) 3(5);}</code>
+	<h3>Explication de la methode reduite:</h3>
+	<code>(1): anim.-name (2): anim.-duration; (3): anim.-delay (4):anim.-timing-function (5):anim.-iteration-count</code>
+
+<div class="from-html fade"><p>I am created from HTML and fading in</p></div>
+<code class="css">
+		.fade{animation: fade 1.5s 2s ease-in 3;}<br><span class="keyframe">@keyframes</span><span class="name"> fade</span><span class="keys">{<br>from {opacity: 0;} <br>to {opacity: 1;}}</span>
+	</code>
+<div class="from-html rotate-clockwise"><p>I am created from HTML and rotating clockwise</p></div>
+<code class="css">
+		.rotate-clockwise{animation: rotate-clockwise 4s 0s linear 1 ;}<br>
+	<span class="keyframe">@keyframes</span> <span class="name">rotate-clockwise</span><span class="keys">{<br>from{opacity: 0; transform: rotate(0)} <br>to {opacity: 1; transform: rotate(360deg)}}</span>
+	</code>
+<div class="from-html rotate-clockwise-reverse"><p>I have the reverse of the rotate-clockwise animation</p></div>
+<code class="css">
+		.rotate-clockwise-reverse{<br>animation: rotate-clockwise 4s 0s linear 1 <span class="rev">reverse</span>;}<br>
+		<span class="keyframe">@keyframes</span> <span class="name">rotate-clockwise</span><span class="keys">{<br>from{opacity: 0; transform: rotate(0)} <br>to {opacity: 1; transform: rotate(360deg)}}</span>
+	</code>
+<div class="from-html run-out" id="last"><p>I am created from HTML and running out</p></div>
+<code class="css">
+		.run-out{animation: run-out 4s 0s linear 1;}<br>
+	<span class="keyframe">@keyframes</span><span class="name"> run-out</span><span class="keys">{<br>
+	0%{left: 0%;}<br>
+	10%{left: 10%; transform: skewX(15deg);}<br>
+	20%{left: 15%;}<br>
+	30%{left: 20%;}<br>
+	40%{left: 25%;}<br>
+	50%{left: 30%;}<br>
+	60%{left: 35%;}<br>
+	70%{left: 40%;}<br>
+	80%{left: 45%;}<br>
+	90%{left: 55%;}<br>
+	100%{left: 70%; opacity:0;}<br>
+}</span>
+	</code>
+</section>
+
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>

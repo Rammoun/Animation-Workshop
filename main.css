@@ -1,0 +1,28 @@
+body{ height: 100vh; width: 97vw;}
+section{width: 100%; display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-top: 3%}
+p{ font-size: 180%; font-weight: 800; }
+h1{color: green; font-size: 45px;}
+h2{color: blue; font-size: 35px;}
+h3{text-decoration: underline; text-decoration-color: darkred; font-size: 29px; text-align: left !important;}
+.content{font-size: 27px}
+div{height: 250px; width: 250px; border: solid; position: relative; margin: 2% 0; background-color: yellow;}
+div p{text-align: center; font-weight: bold; color: red; font-size: 250%; padding: 0px 15px; margin-top: -1%;}
+#res{width: 30%; padding: 2%; margin-top: 1%; background-color: blue; color: aliceblue; font-size: 250%;}
+#res:hover{border: solid 2px red; box-shadow: 0 0 8px black;}
+code{font-size: 220%; margin-top: 4%; font-weight: bold; font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana," sans-serif"}
+.tags{color: blue;} 
+.class{color: red;}
+.css{color: rgba(134,9,175,1.00)}
+.keyframe{color: green; text-decoration: underline;}
+.name{color: red;}
+.keys{color: blue;}
+.rev{color: olive; text-decoration: underline;}
+.from-js{background-color: aqua; border-color: red;}
+.from-js p{text-align: center; font-weight: bold; color: black; font-size: 250%; padding: 15px 15px;}
+.css-function{display: flex; justify-content: space-around; width: 98%; height: auto !important; border: none; background-color: transparent;}
+.fun{color: darkblue;}
+.function{color: rgba(8,8,0,1.00);}
+.transparent{opacity: .7;}
+.scaled{transform: scale(1.5);}
+.skewed{transform: skewX(20deg);}
+.rotated{transform: rotate(60deg);}
