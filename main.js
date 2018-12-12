@@ -46,7 +46,6 @@ function description(e){
 	par.appendChild(txt);<br>
 	newdiv.appendChild(par);<br>
 	newdiv.setAttributeNode(anim);<br>
-	//newdiv.style.animation="rotate-clockwise 4s linear 1";<br>
 	document.getElementById("divs").appendChild(newdiv);<br>
 	}`;
 	txt.innerHTML=inner1;
