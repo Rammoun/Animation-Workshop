@@ -50,7 +50,7 @@ function description(e){
 	document.getElementById("divs").appendChild(newdiv);<br>
 	}`;
 	txt.innerHTML=inner1;
-	txt2.innerHTML=inner2; newdiv.appendChild(txt); //newdiv.appendChild(txt2);
+	txt2.innerHTML=inner2; newdiv.appendChild(txt); newdiv.appendChild(txt2);
 	newdiv.style.animation="fade 4s linear 1";
 	document.getElementById("divs").appendChild(newdiv);
 	
