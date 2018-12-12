@@ -1,4 +1,5 @@
 body{ height: 100vh; width: 97vw;}
+a{font-size: 200%; color: red; font-weight: bold; text-decoration: none;}
 section{width: 100%; display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-top: 3%}
 p{ font-size: 180%; font-weight: 800; }
 h1{color: green; font-size: 45px;}
