@@ -9,7 +9,7 @@ function reset(e){
 	ncl.value=tarclass;
 	setTimeout(function(){ e.target.setAttributeNode(ncl); }, 35);
 }
-/*function ndiv(e){
+function ndiv(e){
 var anim=document.createAttribute("class");
 anim.value="from-js flip";
 var newdiv=document.createElement("div"); newdiv.addEventListener("click",reset); newdiv.addEventListener("animationend",description);
@@ -53,4 +53,4 @@ function description(e){
 	newdiv.style.animation="fade 4s linear 1";
 	document.getElementById("divs").appendChild(newdiv);
 	
-}*/
+}
